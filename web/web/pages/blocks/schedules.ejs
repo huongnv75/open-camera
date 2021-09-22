@@ -1,0 +1,32 @@
+<div class="modal medium dark fade" id="schedules" role="dialog" aria-labelledby="schedulesLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <form class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="schedulesLabel"><i class="fa fa-clock-o"></i> &nbsp; <%-lang['Schedules']%></h4>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+              <%
+                var drawBlock
+                var buildOptions
+              %>
+              <%
+                include fieldBuilders.ejs
+              %>
+              <% Object.keys(define['Schedules'].blocks).forEach(function(blockKey){
+                    var accountSettings = define['Schedules'].blocks[blockKey]
+                    drawBlock(accountSettings)
+                }) %>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal"><i class="fa fa-times"></i> <%-lang.Close%></button>
+        <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> <%-lang.Save%></button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="<%-window.libURL%>libs/js/dash2.schedules.js"></script>
