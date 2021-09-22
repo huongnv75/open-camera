@@ -8,7 +8,7 @@ module.exports = function(s,config){
     }catch(er){
         console.error(er)
         console.log('There was an error loading your language file.')
-        var lang = require(s.location.languages+'/vi.json');
+        var lang = require(s.location.languages+'/en_CA.json');
     }
     //load languages dynamically
     s.copySystemDefaultLanguage = function(){
