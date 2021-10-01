@@ -36,7 +36,7 @@
 }
 </style>
 <% if(screen){screen=screen.toLowerCase()} %>
-<div class="shinobi-bg display-table" style="height:100%">
+<div class="shinobi-bg display-table" style="height: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; background: url(libs/img/bg.jpeg);">
 <div class="shinobi-bg-shade">
 <div class="container">
     	<div class="row">
@@ -118,14 +118,16 @@
                                             } %>
                                         </select>
                                     <% } %>
-                                    <div class="form-group">
-                                        <select class="form-control wide-text" name="alternateLogin" selector="f_i">
-                                            <option value="" selected><%- lang.Default %></option>
-                                            <option value="google">Google</option>
-                                            <option value="ldap"><%- lang.LDAP %></option>
-                                        </select>
-                                        <input style="display:none" name="alternateLoginToken" class="monospace form-control wide-text" placeholder="Group Key">
-                                    </div>
+                                    <% if(config.showLoginSelector === true){ %>
+                                        <div class="form-group">
+                                            <select class="form-control wide-text" name="alternateLogin" selector="f_i">
+                                                <option value="" selected><%- lang.Default %></option>
+                                                <option value="google">Google</option>
+                                                <option value="ldap"><%- lang.LDAP %></option>
+                                            </select>
+                                            <input style="display:none" name="alternateLoginToken" class="monospace form-control wide-text" placeholder="Group Key">
+                                        </div>
+                                    <% } %>
 									<div class="form-group">
                                         <button type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-success btn-block wide-text" style="color:#FFF"><i class="fa fa-key"></i> <%- lang.Login %></button>
 									</div>
@@ -144,7 +146,7 @@
                                         </div>
 									</div>
                                     <% if(config.showPoweredByShinobi){ %>
-                                        <p class="text-green" style="<%- config.poweredByShinobiClass %>"><small><%- config.poweredByShinobi %></small></p>
+                                        <p style="<%- config.poweredByShinobiClass %>"><small>Powered by </small><strong><%- config.poweredByShinobi %></strong></p>
                                     <% }else{ %>
                                         <!-- <%- config.poweredByShinobi %> -->
                                     <% } %>
