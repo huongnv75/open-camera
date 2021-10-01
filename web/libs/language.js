@@ -1,7 +1,7 @@
 var fs = require('fs')
 module.exports = function(s,config){
     if(!config.language){
-        config.language='vi'
+        config.language='en_CA'
     }
     try{
         var lang = require(s.location.languages+'/'+config.language+'.json');
