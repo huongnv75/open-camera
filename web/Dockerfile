@@ -87,6 +87,7 @@ COPY . .
 #RUN rm -rf /home/Shinobi/plugins
 COPY ./plugins  /home/Shinobi/plugins
 RUN chmod -R 777 /home/Shinobi/plugins
+RUN rm -rf ./node_modules
 RUN npm i npm@latest -g && \
     npm install --unsafe-perm && \
     npm install pm2 -g

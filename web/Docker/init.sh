@@ -88,7 +88,7 @@ sudo sed -i -e 's/change_this_to_something_very_random__just_anything_other_than
 
 
 echo "============="
-echo "Default Superuser : admin@shinobi.video"
+echo "Default Superuser : admin@ecyber-group.video"
 echo "Default Password : admin"
 echo "Log in at http://HOST_IP:SHINOBI_PORT/super"
 if [ -e "/config/super.json" ]; then
