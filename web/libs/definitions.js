@@ -12,7 +12,7 @@ module.exports = function(s,config,lang,app,io){
         }catch(er){
             console.error(er)
             console.log('There was an error loading your definition file.')
-            var definitions = require(s.location.definitions+'/en_CA.json');
+            var definitions = require(s.location.definitions+'/vi.json');
         }
     }
     //load defintions dynamically

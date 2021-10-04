@@ -1,5 +1,5 @@
 const definitionFile = process.cwd() + '/definitions/en_CA.js'
-const languagesFile = process.cwd() + '/languages/en_CA.json'
+const languagesFile = process.cwd() + '/languages/vi.json'
 const languagesData = require(languagesFile)
 const definitionData = require(definitionFile)({
         gid: () => {return 'randomId'},
