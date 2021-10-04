@@ -19,7 +19,7 @@ $.aM.generateDefaultMonitorSettings = function(){
     return {
        "mode": "start",
        "mid": $.ccio.gid(),
-       "name": "Some Stream",
+       "name": "",
        "type": "h264",
        "host": "",
        "port": "",
@@ -572,7 +572,7 @@ monitorEditorWindow.on('change','[detail="auto_host"]',function(e){
     if(!disabled||disabled===''){
         //if no value, then probably old version of monitor config. Set to Manual to avoid confusion.
         disabled='0'
-        theSwitch.val('0').change()
+        // theSwitch.val('0').change() \
     }
     if(disabled==='0'){
         return

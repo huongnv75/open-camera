@@ -19,7 +19,6 @@
               <div class="col-md-10">
                   <%
                   var buildOptions = function(field,possiblities){
-                      
                       if(!field)console.error('field',field)
                       var fieldElement = ''
                       possiblities.forEach(function(option){
@@ -244,6 +243,31 @@
           </div>
       </div>
       <div class="modal-footer">
+          <div class="pull-left">
+            <button type="button" id="monedit_bottom_menu" style="margin-right:5px" class="btn btn-default"><i class="fa fa-wrench"></i> <%-lang.Options%></button>
+            <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" data-mdl-for="monedit_bottom_menu">
+              <li class="mdl-menu__item mdl-menu__item--full-bleed-divider" data-dismiss="modal"><i class="fa fa-times"></i> <%-lang.Close%></li>
+              <li class="mdl-menu__item" monitor="delete"><i class="fa fa-trash-o"></i> <%-lang.Delete%></li>
+              <li class="mdl-menu__item save_config"><i class="fa fa-download"></i> <%-lang.Export%></li>
+              <li class="mdl-menu__item import_config"><i class="fa fa-upload"></i> <%-lang.Import%></li>
+              <li class="mdl-menu__item probe_config"><i class="fa fa-search"></i> <%-lang.FFprobe%></li>
+              <li class="mdl-menu__item add_map"><i class="fa fa-rss"></i> <%-lang['Add Input Feed']%></li>
+              <li class="mdl-menu__item add_channel"><i class="fa fa-puzzle-piece"></i> <%-lang['Add Channel']%></li>
+            </ul>
+            <div class="h_det_input h_det_1" style="display:inline-block;margin-right:5px">
+                <button type="button" class="btn btn-primary" monitor="region"><i class="fa fa-grav"></i> <%-lang['Region Editor']%></button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#detector_filter"><i class="fa fa-filter"></i> <%-lang['Event Filters']%></button>
+              </div>
+            <div style="display:inline-block">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#shinobihub_viewer"><i class="fa fa-home"></i> <%-lang.ShinobiHub %></button>
+              </div>
+          </div>
+          <div style="display:inline-block;margin-right:5px">
+            <div><select class="form-control btn-default" dropdown_toggle="monedit_user_type" selector="h_us">
+                <option value="simple" selected><%-lang['Simple']%></option>
+                <option value="advanced"><%-lang['Advanced']%></option>
+            </select></div>
+          </div>
           <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> <%-lang.Save%></button>
       </div>
     </form>

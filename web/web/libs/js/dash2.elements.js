@@ -755,7 +755,7 @@ $(document).ready(function(e){
                     e.p.find('.am_notice_new').show()
                     //new monitor
                     e.p.find('[monitor="delete"]').hide()
-                    e.mt.find('span').text('Add'),e.mt.find('i').attr('class','fa fa-plus');
+                    e.mt.find('span').text(lang.Add),e.mt.find('i').attr('class','fa fa-plus');
                     //default values
                     e.values=$.aM.generateDefaultMonitorSettings();
                 }else{
