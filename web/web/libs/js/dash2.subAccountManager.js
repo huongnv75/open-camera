@@ -98,6 +98,7 @@ $(document).ready(function(){
         },function(data){
             if(data.ok){
                 $.each(form,function(n,v){
+                    console.log('n,v--->',n,v);
                     account[n] = v
                 });
                 accountTable.find(`[uid="${account.uid}"] .mail`).text(form.mail)
@@ -236,11 +237,12 @@ $(document).ready(function(){
         var uid = formValues.uid
         console.log(formValues)
         if(formValues.uid){
-            console.log('edit')
+            console.log('edit---->', formValues);
             editSubaccount(uid,formValues,function(data){
                 console.log(data)
             })
         }else{
+            console.log('add---->', formValues);
             addSubAccount(formValues,function(data){
                 console.log(data)
             })
