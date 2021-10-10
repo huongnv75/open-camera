@@ -244,6 +244,14 @@
           </div>
       </div>
       <div class="modal-footer">
+        <div class="pull-left">
+            <button type="button" id="monedit_bottom_menu" style="margin-right:5px" class="btn btn-default"><i class="fa fa-wrench"></i> <%-lang.Options%></button>
+            <ul class="mdl-menu mdl-menu--top-left mdl-js-menu mdl-js-ripple-effect" data-mdl-for="monedit_bottom_menu">
+              <li class="mdl-menu__item mdl-menu__item--full-bleed-divider" data-dismiss="modal"><i class="fa fa-times"></i> <%-lang.Close%></li>
+              <li class="mdl-menu__item" monitor="delete"><i class="fa fa-trash-o"></i> <%-lang.Delete%></li>
+              <li class="mdl-menu__item save_config"><i class="fa fa-download"></i> <%-lang.Export%></li>
+            </ul>
+        </div>
           <button type="submit" class="btn btn-success"><i class="fa fa-check"></i> <%-lang.Save%></button>
       </div>
     </form>

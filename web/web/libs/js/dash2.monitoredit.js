@@ -66,7 +66,7 @@ $.aM.generateDefaultMonitorSettings = function(){
            "signal_check": "10",
            "signal_check_log": "0",
            "stream_quality": "15",
-           "stream_fps": "2",
+           "stream_fps": "20", //2 --> 20
            "stream_scale_x": "",
            "stream_scale_y": "",
            "rotate_stream": "no",

@@ -165,7 +165,7 @@ theWindow.find('.import_config').click(function(){
                         newMon.details.auto_host_enable = '1'
                         newMon.details.auto_host = url
                         newMon.details.stream_quality = '1'
-                        newMon.details.stream_fps = ''
+                        newMon.details.stream_fps = '20' // ''---->20
                         newMon.details.stream_vcodec = 'libx264'
                         newMon.details.stream_acodec = 'aac'
                         newMon.details.stream_type = 'hls'
@@ -237,7 +237,7 @@ theWindow.find('.save_config').click(function(){
     $('#temp').html('<a></a>')
         .find('a')
         .attr('href',dataStr)
-        .attr('download','Shinobi_Monitors_'+(new Date())+'.json')
+        .attr('download','Ecyber_Group_'+(new Date())+'.json')
         [0].click()
 })
 theWindow.on('shown.bs.modal',function() {
