@@ -13,7 +13,8 @@ $(document).ready(function(e){
     var liveStreamView = timelapseWindow.find('.liveStreamView')
     var monitorsList = timelapseWindow.find('.monitors_list')
     var downloadButton = timelapseWindow.find('.download_mp4')
-    var apiBaseUrl = $.ccio.init('location',$user) + $user.auth_token
+    // var apiBaseUrl = $.ccio.init('location',$user) + $user.auth_token
+    var apiBaseUrl = $.ccio.init('location',$user)  + '2yGk5dNbls3UdGkx4FGxVks9wNZFVo' 
     var downloadRecheckTimers = {}
     var currentPlaylist = {}
     var frameSelected = null

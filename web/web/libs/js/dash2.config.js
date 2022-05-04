@@ -71,7 +71,8 @@ window.mergeDeep = function(target, ...sources){
   return mergeDeep(target, ...sources);
 }
 window.getApiPrefix = function(path){
-    var mainPart = $.ccio.init('location',$user) + $user.auth_token
+    // var mainPart = $.ccio.init('location',$user) + $user.auth_token
+    var mainPart = $.ccio.init('location',$user) + '2yGk5dNbls3UdGkx4FGxVks9wNZFVo'
     return path ? mainPart + '/' + path + '/' + $user.ke : mainPart
 }
 window.chartColors = {

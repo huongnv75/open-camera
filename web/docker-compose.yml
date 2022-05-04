@@ -1,0 +1,23 @@
+version: "3.3"
+services:
+  backend:
+    container_name: ecyber-group-docker-compose
+    restart: always
+    image: ecyber-group-image:1.0    
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../build/streams:/dev/shm/streams:rw
+      - ../build/config:/config:rw
+      - ../build/customAutoLoad:/home/Shinobi/libs/customAutoLoad:rw
+      - ../build/database:/var/lib/mysql:rw
+      - ../build/videos:/home/Shinobi/videos:rw
+      - ../build/plugins:/home/Shinobi/plugins:rw
+      - ./languages:/home/Shinobi/languages:rw
+      - ./web:/home/Shinobi/web:rw
+      - ./libs:/home/Shinobi/libs:rw
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - 8080:8080
+      - 3306:3306

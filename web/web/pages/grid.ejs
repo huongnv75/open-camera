@@ -109,8 +109,9 @@ if(!data.group || data.group === ''){
                 height = saved.height;
                 autoPlacement = false;
             }
-            var tmp = '<div auth="'+data.auth+'" ke="'+data.ke+'" mid="'+monitor.mid+'" class="grid-stack-item"><div class="grid-stack-item-content"><div class="grid-stack-item-content-overlay"><a monitor="watch_off"><i class="fa fa-times-circle"></i></a></div><iframe src="'+data.url+'/'+data.auth+'/embed/'+monitor.ke+'/'+monitor.mid+'/fullscreen|jquery|relative"></iframe></div></div>'
-            grid.addWidget($(tmp), x, y, width, height, autoPlacement);
+            //var tmp = '<div auth="'+data.auth+'" ke="'+data.ke+'" mid="'+monitor.mid+'" class="grid-stack-item"><div class="grid-stack-item-content"><div class="grid-stack-item-content-overlay"><a monitor="watch_off"><i class="fa fa-times-circle"></i></a></div><iframe src="'+data.url+'/'+data.auth+'/embed/'+monitor.ke+'/'+monitor.mid+'/fullscreen|jquery|relative"></iframe></div></div>'
+            var tmp = '<div auth="'+'2yGk5dNbls3UdGkx4FGxVks9wNZFVo'+'" ke="'+data.ke+'" mid="'+monitor.mid+'" class="grid-stack-item"><div class="grid-stack-item-content"><div class="grid-stack-item-content-overlay"><a monitor="watch_off"><i class="fa fa-times-circle"></i></a></div><iframe src="'+data.url+'/'+data.auth+'/embed/'+monitor.ke+'/'+monitor.mid+'/fullscreen|jquery|relative"></iframe></div></div>'  
+          grid.addWidget($(tmp), x, y, width, height, autoPlacement);
         })
     });
 </script>

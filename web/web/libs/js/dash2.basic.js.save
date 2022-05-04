@@ -314,8 +314,8 @@ $.ccio.magnifyStream = function(options,user){
                     if(options.useCanvas === true){
                         parent.append(zoomGlassShell('<canvas class="blenderCanvas"></canvas>'))
                     }else{
-                        // parent.append(zoomGlassShell('<iframe src="'+$.ccio.init('location',user)+sessionKey+'/embed/'+groupKey+'/'+monitorId+'/fullscreen|jquery|relative"/><div class="hoverShade"></div>'))
-                        parent.append(zoomGlassShell('<iframe src="'+$.ccio.init('location',user)+'2yGk5dNbls3UdGkx4FGxVks9wNZFVo'+'/embed/'+groupKey+'/'+monitorId+'/fullscreen|jquery|relative"/><div class="hoverShade"></div>'))
+                        parent.append(zoomGlassShell('<iframe src="'+$.ccio.init('location',user)+sessionKey+'/embed/'+groupKey+'/'+monitorId+'/fullscreen|jquery|relative"/><div class="hoverShade"></div>'))
+
                     }
                     zoomGlass = parent.find(".zoomGlass")
                 }

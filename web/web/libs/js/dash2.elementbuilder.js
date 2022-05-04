@@ -55,7 +55,7 @@ $.ccio.tm=function(x,d,z,user){
             tmp+='<div auth="'+user.auth_token+'" mid="'+d.mid+'" ke="'+d.ke+'" title="'+d.mid+' : '+d.name+'" class="monitor_block glM'+d.mid+user.auth_token+' col-md-4"><img monitor="watch" class="snapshot" src="'+d.src+'"><div class="box"><div class="title monitor_name truncate">'+d.name+'</div><div class="list-data"><div class="monitor_mid">'+d.mid+'</div><div><b>'+lang['Save as']+' :</b> <span class="monitor_ext">'+d.ext+'</span></div><div><b>Status :</b> <span class="monitor_status">'+d.status+'</span></div></div><div class="icons text-center">'
             tmp+='<div class="btn-group btn-group-xs">'
                 var buttons = {
-                   "Pop": {
+                  "Pop": {
                       "label": lang['Pop'],
                       "attr": "monitor=\"pop\"",
                       "class": "default",
@@ -67,14 +67,14 @@ $.ccio.tm=function(x,d,z,user){
                    //    "class": "default",
                    //    "icon": "map-marker"
                    // },
-                   "Videos List": {
-                      "label": lang['Videos List'],
-                      "attr": "monitor=\"videos_table\"",
-                      "class": "default",
-                      "icon": "film"
-                   },
+                   //"Videos List": {
+                   //   "label": lang['Videos List'],
+                   //   "attr": "monitor=\"videos_table\"",
+                   //   "class": "default",
+                   //   "icon": "film"
+                  // },
                    "Monitor Settings": {
-                      "label": lang['Monitor Settings'],
+                      "label": "Cập nhật",
                       "attr": "monitor=\"edit\"",
                       "class": "default",
                       "icon": "wrench"
@@ -118,32 +118,32 @@ $.ccio.tm=function(x,d,z,user){
             tmp+='</div>';
             tmp+='<div class="btn-group btn-group-sm">'//start of btn list
                 var buttons = {
-                   "Mute Audio": {
-                      "label": lang['Mute Audio'],
-                      "attr": "system=\"monitorMuteAudioSingle\" mid=\"" + d.mid + "\"",
-                      "class": "primary",
-                      "icon": monitorMutes[d.mid] !== 1 ? 'volume-up' : 'volume-off'
-                   },
+                  // "Mute Audio": {
+                  //    "label": lang['Mute Audio'],
+                  //    "attr": "system=\"monitorMuteAudioSingle\" mid=\"" + d.mid + "\"",
+                 //     "class": "primary",
+                 //     "icon": monitorMutes[d.mid] !== 1 ? 'volume-up' : 'volume-off'
+                 //  },
                    "Snapshot": {
-                      "label": lang['Snapshot'],
+                      "label": "Chụp ảnh",
                       "attr": "monitor=\"snapshot\"",
                       "class": "primary",
                       "icon": "camera"
                    },
-                   "Show Logs": {
-                      "label": lang['Show Logs'],
-                      "attr": "monitor=\"show_data\"",
-                      "class": "warning",
-                      "icon": "exclamation-triangle"
-                   },
-                   "Control": {
-                      "label": lang['Control'],
-                      "attr": "monitor=\"control_toggle\"",
-                      "class": "default arrows",
-                      "icon": "arrows"
-                   },
+                  // "Show Logs": {
+                  //    "label": lang['Show Logs'],
+                  //    "attr": "monitor=\"show_data\"",
+                  //    "class": "warning",
+                  //    "icon": "exclamation-triangle"
+                  // },
+                  // "Control": {
+                  //    "label": lang['Control'],
+                  //    "attr": "monitor=\"control_toggle\"",
+                  //    "class": "default arrows",
+                  //    "icon": "arrows"
+                  // },
                    "Reconnect Stream": {
-                      "label": lang['Reconnect Stream'],
+                     "label": "Kết nối lại",
                       "attr": "monitor=\"watch_on\"",
                       "class": "success signal",
                       "icon": "plug"
@@ -154,56 +154,56 @@ $.ccio.tm=function(x,d,z,user){
                       "class": "default",
                       "icon": "external-link"
                    },
-                   "Zoom In": {
-                      "label": lang['Zoom In'],
-                      "attr": "monitor=\"zoomStreamWithMouse\"",
-                      "class": "default",
-                      "icon": "search-plus"
-                   },
-                   "Calendar": {
-                      "label": lang['Calendar'],
-                      "attr": "monitor=\"calendar\"",
-                      "class": "default ",
-                      "icon": "calendar"
-                   },
+                 //  "Zoom In": {
+                 //     "label": lang['Zoom In'],
+                //      "attr": "monitor=\"zoomStreamWithMouse\"",
+                ///      "class": "default",
+                //      "icon": "search-plus"
+                //   },
+                  // "Calendar": {
+                  //    "label": lang['Calendar'],
+                 //     "attr": "monitor=\"calendar\"",
+                 //     "class": "default ",
+                 //     "icon": "calendar"
+                 //  },
                    // "Power Viewer": {
                    //    "label": lang['Power Viewer'],
                    //    "attr": "monitor=\"powerview\"",
                    //    "class": "default",
                    //    "icon": "map-marker"
                    // },
-                   "Time-lapse": {
-                      "label": lang['Time-lapse'],
-                      "attr": "monitor=\"timelapseJpeg\"",
-                      "class": "default",
-                      "icon": "angle-double-right"
-                   },
-                   "Video Grid": {
-                      "label": "Video Grid",
-                      "attr": "monitor=\"video_grid\"",
-                      "class": "default",
-                      "icon": "th"
-                   },
-                   "Videos List": {
-                      "label": lang['Videos List'],
-                      "attr": "monitor=\"videos_table\"",
-                      "class": "default",
-                      "icon": "film"
-                   },
-                   "Monitor Settings": {
-                      "label": lang['Monitor Settings'],
-                      "attr": "monitor=\"edit\"",
-                      "class": "default",
-                      "icon": "wrench"
-                   },
+                  /// "Time-lapse": {
+                    //  "label": lang['Time-lapse'],
+                    //  "attr": "monitor=\"timelapseJpeg\"",
+                    //  "class": "default",
+                   //   "icon": "angle-double-right"
+                  // },
+                  // "Video Grid": {
+                    //  "label": "Video Grid",
+                    //  "attr": "monitor=\"video_grid\"",
+                    ///  "class": "default",
+                   ///   "icon": "th"
+                  // },
+                 //  "Videos List": {
+                 //     "label": lang['Videos List'],
+                  //    "attr": "monitor=\"videos_table\"",
+                 //     "class": "default",
+                  //    "icon": "film"
+                 //  },
+                 //  "Monitor Settings": {
+                 //     "label": lang['Monitor Settings'],
+                //      "attr": "monitor=\"edit\"",
+                //      "class": "default",
+                 //     "icon": "wrench"
+                  // },
                    "Fullscreen": {
-                      "label": lang['Fullscreen'],
+                      "label": "Toàn màn hình",
                       "attr": "monitor=\"fullscreen\"",
                       "class": "default",
                       "icon": "arrows-alt"
                    },
                    "Close": {
-                      "label": lang['Close'],
+                      "label": "Đóng",
                       "attr": "monitor=\"watch_off\"",
                       "class": "danger",
                       "icon": "times"

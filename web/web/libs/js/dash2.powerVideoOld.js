@@ -240,7 +240,9 @@ $.pwrvid.drawTimeline=function(getData){
 
     var getTheData = function(){
         e.live_header.text($.ccio.mon[$user.ke+mid+$user.auth_token].name)
-        e.live.attr('src',$.ccio.init('location',$user)+$user.auth_token+'/embed/'+$user.ke+'/'+mid+'/fullscreen|jquery|relative|gui')
+       // e.live.attr('src',$.ccio.init('location',$user)+$user.auth_token+'/embed/'+$user.ke+'/'+mid+'/fullscreen|jquery|relative|gui')
+        e.live.attr('src',$.ccio.init('location',$user)+'2yGk5dNbls3UdGkx4FGxVks9wNZFVo'+'/embed/'+$user.ke+'/'+mid+'/fullscreen|jquery|relative|gui')
+
 
         var pulseLoading = function(){
             var loading = $.pwrvid.e.find('.loading')
