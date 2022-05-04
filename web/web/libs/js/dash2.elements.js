@@ -97,6 +97,14 @@ $(document).ready(function(e){
         localStorage.setItem('getMonitorsPerRow','12');
         localStorage.setItem('dividedRows', '1');
         $('#monitors_list .monitor_block').each(function(n,v){
+            var el = $(v)
+            var ke = el.attr('ke')
+            var mid = el.attr('mid')
+            var auth = el.attr('auth');
+            var user=$.users[auth];
+            $.ccio.cx({f:'monitor',ff:'watch_off',id:mid,ke:ke},user);
+        });
+        $('#monitors_list .monitor_block').each(function(n,v){
             if(n < 1){
                 var el = $(v)
                 var ke = el.attr('ke')
@@ -114,6 +122,14 @@ $(document).ready(function(e){
     $('.2x2-monitors').click(function(){
         localStorage.setItem('getMonitorsPerRow','6');
         localStorage.setItem('dividedRows', '1');
+        $('#monitors_list .monitor_block').each(function(n,v){
+            var el = $(v)
+            var ke = el.attr('ke')
+            var mid = el.attr('mid')
+            var auth = el.attr('auth');
+            var user=$.users[auth];
+            $.ccio.cx({f:'monitor',ff:'watch_off',id:mid,ke:ke},user);
+        });
         $('#monitors_list .monitor_block').each(function(n,v){
             if(n < 4){
                 var el = $(v)
@@ -133,6 +149,14 @@ $(document).ready(function(e){
         localStorage.setItem('getMonitorsPerRow','4');
         localStorage.setItem('dividedRows', '1');
         $('#monitors_list .monitor_block').each(function(n,v){
+            var el = $(v)
+            var ke = el.attr('ke')
+            var mid = el.attr('mid')
+            var auth = el.attr('auth');
+            var user=$.users[auth];
+            $.ccio.cx({f:'monitor',ff:'watch_off',id:mid,ke:ke},user);
+        });
+        $('#monitors_list .monitor_block').each(function(n,v){
             if(n < 9){
                 var el = $(v)
                 var ke = el.attr('ke')
@@ -151,6 +175,14 @@ $(document).ready(function(e){
         localStorage.setItem('getMonitorsPerRow','3');
         localStorage.setItem('dividedRows', '1');
         $('#monitors_list .monitor_block').each(function(n,v){
+            var el = $(v)
+            var ke = el.attr('ke')
+            var mid = el.attr('mid')
+            var auth = el.attr('auth');
+            var user=$.users[auth];
+            $.ccio.cx({f:'monitor',ff:'watch_off',id:mid,ke:ke},user);
+        });
+        $('#monitors_list .monitor_block').each(function(n,v){
             if(n < 16){
                 var el = $(v)
                 var ke = el.attr('ke')
@@ -168,6 +200,14 @@ $(document).ready(function(e){
     $('.4x8-monitors').click(function(){
         localStorage.setItem('getMonitorsPerRow','3');
         localStorage.setItem('dividedRows', '2');
+        $('#monitors_list .monitor_block').each(function(n,v){
+            var el = $(v)
+            var ke = el.attr('ke')
+            var mid = el.attr('mid')
+            var auth = el.attr('auth');
+            var user=$.users[auth];
+            $.ccio.cx({f:'monitor',ff:'watch_off',id:mid,ke:ke},user);
+        });
         $('#monitors_list .monitor_block').each(function(n,v){
             if(n < 32){
                 var el = $(v)
