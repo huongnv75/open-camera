@@ -26,7 +26,7 @@ $(document).ready(function(e){
                 x = '2'
             break;
            default://3
-                x = '4'
+                x = localStorage.getItem('getMonitorsPerRow') || '4'
             break;
         }
         return x

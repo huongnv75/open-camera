@@ -92,7 +92,107 @@ $(document).ready(function(e){
                 el.find('[monitor="watch"]').click()
             }
         })
-    })
+    });
+    $('.1x1-monitor').click(function(){
+        localStorage.setItem('getMonitorsPerRow','12');
+        localStorage.setItem('dividedRows', '1');
+        $('#monitors_list .monitor_block').each(function(n,v){
+            if(n < 1){
+                var el = $(v)
+                var ke = el.attr('ke')
+                var mid = el.attr('mid')
+                var auth = el.attr('auth')
+                var monItem = $('.monitor_item[ke='+ke+'][mid='+mid+'][auth='+auth+']')
+                if(monItem.length > 0){
+                    monItem.find('[monitor="watch_on"]').click()
+                }else{
+                    el.find('[monitor="watch"]').click()
+                }
+            } else {
+                break;
+            }
+        })
+    });
+    $('.2x2-monitors').click(function(){
+        localStorage.setItem('getMonitorsPerRow','6');
+        localStorage.setItem('dividedRows', '1');
+        $('#monitors_list .monitor_block').each(function(n,v){
+            if(n < 4){
+                var el = $(v)
+                var ke = el.attr('ke')
+                var mid = el.attr('mid')
+                var auth = el.attr('auth')
+                var monItem = $('.monitor_item[ke='+ke+'][mid='+mid+'][auth='+auth+']')
+                if(monItem.length > 0){
+                    monItem.find('[monitor="watch_on"]').click()
+                }else{
+                    el.find('[monitor="watch"]').click()
+                }
+            } else {
+                break;
+            }
+        })
+    });
+    $('.3x3-monitors').click(function(){
+        localStorage.setItem('getMonitorsPerRow','4');
+        localStorage.setItem('dividedRows', '1');
+        $('#monitors_list .monitor_block').each(function(n,v){
+            if(n < 9){
+                var el = $(v)
+                var ke = el.attr('ke')
+                var mid = el.attr('mid')
+                var auth = el.attr('auth')
+                var monItem = $('.monitor_item[ke='+ke+'][mid='+mid+'][auth='+auth+']')
+                if(monItem.length > 0){
+                    monItem.find('[monitor="watch_on"]').click()
+                }else{
+                    el.find('[monitor="watch"]').click()
+                }
+            } else {
+                break;
+            }
+        })
+    });
+    $('.4x4-monitors').click(function(){
+        localStorage.setItem('getMonitorsPerRow','3');
+        localStorage.setItem('dividedRows', '1');
+        $('#monitors_list .monitor_block').each(function(n,v){
+            if(n < 16){
+                var el = $(v)
+                var ke = el.attr('ke')
+                var mid = el.attr('mid')
+                var auth = el.attr('auth')
+                var monItem = $('.monitor_item[ke='+ke+'][mid='+mid+'][auth='+auth+']')
+                if(monItem.length > 0){
+                    monItem.find('[monitor="watch_on"]').click()
+                }else{
+                    el.find('[monitor="watch"]').click()
+                }
+            } else {
+                break;
+            }
+        })
+    });
+    $('.4x8-monitors').click(function(){
+        localStorage.setItem('getMonitorsPerRow','3');
+        localStorage.setItem('dividedRows', '2');
+        $('#monitors_list .monitor_block').each(function(n,v){
+            if(n < 32){
+                var el = $(v)
+                var ke = el.attr('ke')
+                var mid = el.attr('mid')
+                var auth = el.attr('auth')
+                var monItem = $('.monitor_item[ke='+ke+'][mid='+mid+'][auth='+auth+']')
+                if(monItem.length > 0){
+                    monItem.find('[monitor="watch_on"]').click()
+                }else{
+                    el.find('[monitor="watch"]').click()
+                }
+            } else {
+                break;
+            }
+        })
+    });
     //search monitors list
     $('#monitors_list_search').keyup(function(){
         var monitorBlocks = $('.monitor_block');
