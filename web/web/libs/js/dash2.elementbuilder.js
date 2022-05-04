@@ -815,7 +815,7 @@ $.ccio.tm=function(x,d,z,user){
             var x = 0;
             var y = 0;
             var width = $.grid.getMonitorsPerRow();
-            var dividedNumber = Math.parseInt(localStorage.getItem('dividedRows') || '1')
+            var dividedNumber = parseInt(localStorage.getItem('dividedRows') || '1')
             var height = width/dividedNumber;
             if(user.details && user.details.monitorOrder && user.details.monitorOrder[d.ke+d.mid]){
                 var saved = user.details.monitorOrder[d.ke+d.mid];
