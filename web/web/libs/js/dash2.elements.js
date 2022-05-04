@@ -108,8 +108,6 @@ $(document).ready(function(e){
                 }else{
                     el.find('[monitor="watch"]').click()
                 }
-            } else {
-                break;
             }
         })
     });
@@ -128,9 +126,7 @@ $(document).ready(function(e){
                 }else{
                     el.find('[monitor="watch"]').click()
                 }
-            } else {
-                break;
-            }
+            } 
         })
     });
     $('.3x3-monitors').click(function(){
@@ -148,8 +144,6 @@ $(document).ready(function(e){
                 }else{
                     el.find('[monitor="watch"]').click()
                 }
-            } else {
-                break;
             }
         })
     });
@@ -168,9 +162,7 @@ $(document).ready(function(e){
                 }else{
                     el.find('[monitor="watch"]').click()
                 }
-            } else {
-                break;
-            }
+            } 
         })
     });
     $('.4x8-monitors').click(function(){
@@ -188,9 +180,7 @@ $(document).ready(function(e){
                 }else{
                     el.find('[monitor="watch"]').click()
                 }
-            } else {
-                break;
-            }
+            } 
         })
     });
     //search monitors list
